@@ -1,0 +1,13 @@
+
+<div  ng-controller="ProductCtrl as store">
+  <div ng-repeat = "product in store.products|orderBy:'price'">
+    <div ng-hide = "product.soldout">
+      <p><b>Name:{{product.name|uppercase}}</b> <button ng-show = "product.available">Add to Cart </button></p>
+      <p>Type:{{product.type}}</p>
+      <p>Price:{{product.price|currency}}</p>
+      <p>Description:{{product.description}}</p>
+
+      
+    </div>
+  </div>
+</div>

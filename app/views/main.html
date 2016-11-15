@@ -1,0 +1,26 @@
+
+  <div class="jumbotron">
+    <h1>'Allo, 'Allo!</h1>
+    <p class="lead">
+      <img src="images/yeoman.png" alt="I'm Yeoman"><br>
+      Always a pleasure scaffolding your apps.
+    </p>
+    <p><a class="btn btn-lg btn-success" ng-href="#/">Splendid!<span class="glyphicon glyphicon-ok"></span></a></p>
+  </div>
+
+  <div class="row marketing" ng-controller="MainCtrl as store">
+    <h4>HTML5 Boilerplate testing refresh again</h4>
+    <p>
+      HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.
+      {{"Hello"+" Kishore"}}
+    </p>
+    <p> Awesomethings ={{store.awesomeThings}}</p>
+    <div ng-repeat = "product in store.products">
+      <p ng-hide = "product.soldout">
+        Name:{{product.name}}
+        Type:{{product.type}}
+        Description:{{product.description}}
+        <button ng-show = "product.available">Add to Cart </button>
+      </p>
+    </div>
+  </div>
